@@ -7,7 +7,7 @@ const app = express();
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/peliculas-app'));
 
-app.get('/*', (req, res) =>
+app.get('/home', (req, res) =>
     res.sendFile('/src/index.html', { root: './dist/peliculas-app' }),
 );
 
